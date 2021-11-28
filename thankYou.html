@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- load jquery & jquery.terminal -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <!-- & their stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+
+    <title>You've Won a FREE Terminal!</title>
+    <style type="text/css">
+        .terminal,
+        span,
+        .cmd,
+        div {
+            --color: rgba(0, 128, 0, 0.99)
+        }
+        .terminal,
+        span {
+            --size: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        $('body').terminal({
+            welcome: function (name) {
+                this.echo(`Hello ${name}, welcome to your new terminal!`);
+            },
+            founder: function () {
+                this.echo('Sandeep Jain');
+            },
+            devMtn: function(){
+                this.echo(`
+    dMMMMb  dMMMMMP dMP dMP dMMMMMMMMb .aMMMb  dMP dMP dMMMMb dMMMMMMP .aMMMb  dMP dMMMMb         dMMMMb  dMP dMP dMP     dMMMMMP .dMMMb 
+   dMP VMP dMP     dMP dMP dMP"dMP"dMPdMP"dMP dMP dMP dMP dMP   dMP   dMP"dMP amr dMP dMP        dMP.dMP dMP dMP dMP     dMP     dMP" VP 
+  dMP dMP dMMMP   dMP dMP dMP dMP dMPdMP dMP dMP dMP dMP dMP   dMP   dMMMMMP dMP dMP dMP        dMMMMK" dMP dMP dMP     dMMMP    VMMMb   
+ dMP.aMP dMP      YMvAP" dMP dMP dMPdMP.aMP dMP.aMP dMP dMP   dMP   dMP dMP dMP dMP dMP        dMP"AMF dMP.aMP dMP     dMP     dP .dMP   
+dMMMMP" dMMMMMP    VP"  dMP dMP dMP VMMMP"  VMMMP" dMP dMP   dMP   dMP dMP dMP dMP dMP        dMP dMP  VMMMP" dMMMMMP dMMMMMP  VMMMP"    
+                                                                                                                                         
+`)
+            },
+            add: function(x, y){
+               this.echo(`${x} + ${y} = ${x+y}`)
+            },
+            subtract: function(x, y){
+               this.echo(`${x} - ${y} = ${x-y}`)
+            },
+            multiply: function(x, y){
+               this.echo(`${x} * ${y} = ${x*y}`)
+            },
+            divide: function(x, y){
+               this.echo(`${x} / ${y} = ${x/y}`)
+            },
+            remainder: function(x, y){
+               this.echo(`${x} % ${y} = ${x%y}`)
+            },
+            raiseTo: function(x, y){
+                let ans = Math.pow(x,y)
+               this.echo(`${x} to the power of ${y} = ${ans}`)
+            },
+            echo: function(message){
+                this.echo(`${message}`)
+            },
+            cowsay: function(string){
+                this.echo(String.raw` _______________________ 
+< ${string} >
+ ----------------------- 
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||`)
+            },
+            help: function () {
+                this.echo('welcome <name> - welcomes user\n'
+                + 'founder - to know the founder\n'
+                + 'devMtn - displays ASCII art\n'
+                + 'add <x y> - add two numbers together\n'
+                + 'subrtract <x y> - subtract two numbers\n'
+                + 'multiply <x y> - multiply two numbers\n'
+                + 'divide <x y> - divide two numbers\n'
+                + 'remainder <x y> - remainder of two numbers\n'
+                + 'raiseTo <x y> - raises x to the power of y\n'
+                + 'echo <message> - repeat your message\n'
+                + 'cowsay <word> - have a cow say your word'
+                );
+            },
+        }, {
+            greetings: `Congratulations! You've won a free terminal!\nThis terminal is made possible by jQuery, geeksforgeeks.org, Sandeep Jain, and users like you. Thank you.\nType help for list of commands`
+        });
+    </script>
+</body>
+</html>

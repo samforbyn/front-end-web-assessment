@@ -1,0 +1,117 @@
+body {
+  background: #ddd;
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+nav {
+	border-bottom: 2px solid orange;
+}
+
+ol {
+	padding-left: 0;
+}
+
+.crumb {
+	margin-right: 2em;
+	display: inline;
+}
+
+a {
+	color: orange;
+}
+
+a:visited {
+	color: crimson;
+}
+
+
+input {
+	display: block;
+}
+
+img {
+	max-width: 300px;
+}
+
+#pplsfreeway {
+	float:right;
+	position: relative;
+	border-radius: 50%;
+}
+
+.horizon {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.posFix {
+	position: relative;
+	left: 13rem;
+	bottom: 23px;
+}
+
+.horizon1 {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 1rem;
+
+}
+
+.pushLeft {
+	position: relative;
+	left: 1rem;
+}
+
+#otherTxt {
+	position: relative;
+	left: 2rem;
+}
+
+#otherBtn{
+	position: relative;
+	left: 2rem;
+}
+
+.btnStyle {
+	background-color: yellow;
+	transform: scale(1.2);
+	cursor: pointer;
+
+}
+
+h2#hoodBodyStyle{
+line-height: 30pt;
+}
+
+#pfMap {
+	border-radius: 9px;
+	border: black 2px solid;
+	position: relative;
+	left: 5rem;
+}
+
+#randomBtn {
+	position: relative;
+	left: 8rem;
+	
+}
+
+#randomBtn:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+	color: white;
+	background-color: red;
+}
+
+#txtInsert{
+	position: relative;
+	top: 1rem;
+	left: 6rem;
+	font-weight: 700;
+	transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) ease-in;
+}
